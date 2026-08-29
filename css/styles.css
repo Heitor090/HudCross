@@ -1,0 +1,255 @@
+
+:root {
+  --color-primary: #F5C518;       /* Amarelo Ouro */
+  --color-primary-hover: #D9A900;
+  --color-bg-main: #121212;      /* Fundo Preto Escuro */
+  --color-bg-card: #1E1E1E;      /* Fundo dos Cards */
+  --color-text: #FFFFFF;
+  --color-text-muted: #B0B0B0;
+  
+  --font-display: 'Verdana'; /* Fonte estilo gamer/impacto */
+  --font-body: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Cabeçalho --- */
+.navbar {
+  background-color: #000000;
+  border-bottom: 2px solid var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: #FFF;
+}
+
+.logo-text span {
+  color: var(--color-primary);
+}
+
+.nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* --- Botões --- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-hero {
+  background-color: var(--color-primary);
+  color: #000;
+  font-size: 1.2rem;
+  padding: 18px 36px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(245, 197, 24, 0.4);
+}
+
+.btn-hero:hover {
+  transform: scale(1.05);
+}
+
+/* --- Banner Hero --- */
+.hero {
+  position: relative;
+  height: 80vh;
+  background: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  color: #FFF;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* --- Cards / Modalidades --- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: -60px auto 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background-color: var(--color-bg-card);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-highlight {
+  border: 2px solid var(--color-primary);
+  background-color: #252525;
+}
+
+.card-badge {
+  font-family: var(--font-display);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* --- Mapa --- */
+.map-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.section-title span {
+  color: var(--color-primary);
+}
+
+.map-wrapper {
+  border: 3px solid var(--color-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* --- Rodapé e WhatsApp --- */
+.footer {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #222;
+  color: var(--color-text-muted);
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .nav-links { display: none; }
+}
